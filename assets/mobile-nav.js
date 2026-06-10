@@ -3,6 +3,24 @@ document.addEventListener('DOMContentLoaded', function () {
   const sidebar = document.querySelector('.sidebar');
   if (!header || !sidebar) return;
 
+  // Swap logo to symbol on mobile
+  const logoImg = document.querySelector('.header-logo img');
+  if (logoImg) {
+    const fullSrc = logoImg.getAttribute('src');
+    const symbolSrc = fullSrc.replace(/NAG-logo_primär-svart\.svg/, 'NAG-logo_symbol-svart.svg');
+    function updateLogo() {
+      if (window.innerWidth <= 768) {
+        logoImg.src = symbolSrc;
+        logoImg.style.height = '28px';
+      } else {
+        logoImg.src = fullSrc;
+        logoImg.style.height = '';
+      }
+    }
+    updateLogo();
+    window.addEventListener('resize', updateLogo);
+  }
+
   // Inject hamburger button
   const btn = document.createElement('button');
   btn.className = 'hamburger';
