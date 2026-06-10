@@ -228,10 +228,11 @@ a:hover { text-decoration: underline; }
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    105deg,
-    rgba(0,0,0,.80) 0%,
-    rgba(0,0,0,.55) 55%,
-    rgba(0,0,0,.30) 100%
+    to top,
+    rgba(0,0,0,.90) 0%,
+    rgba(0,0,0,.60) 40%,
+    rgba(0,0,0,.20) 75%,
+    rgba(0,0,0,.10) 100%
   );
   z-index: 0;
 }
@@ -992,19 +993,22 @@ a:hover { text-decoration: underline; }
   .main { margin-left: 0; }
   .page-footer { margin-left: 0; padding: 1.5rem var(--mob-pad); }
 
-  /* Hero — 80% viewport height */
+  /* Hero */
   .page-hero {
-    padding: 2.5rem var(--mob-pad) 2.5rem;
-    min-height: 80vh;
+    padding: 2.5rem var(--mob-pad) 2.75rem;
+    min-height: calc(100svh - var(--header-h) - 34px);
+    justify-content: flex-end;
   }
-  .page-hero h1 { font-size: 2.75rem; letter-spacing: -.02em; }
-  .page-hero p { font-size: .9375rem; max-width: 100%; }
+  .page-hero h1 {
+    font-size: 2.5rem;
+    letter-spacing: -.01em;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  .page-hero p { font-size: 1.125rem; max-width: 100%; }
 
   /* Page body */
   .page-body { padding: 2.5rem var(--mob-pad); }
-
-  /* Hero — prevent long words from clipping */
-  .page-hero h1 { word-break: break-word; hyphens: auto; }
 
   /* Section titles + desc align */
   .section-title { font-size: 1.25rem; }
