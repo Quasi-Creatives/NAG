@@ -879,6 +879,23 @@ a:hover { text-decoration: underline; }
   backdrop-filter: blur(4px);
 }
 
+/* ─── Logo page helpers ────────────────────────────────────── */
+.placement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.cobrand-box {
+  border: 1px solid var(--gray-20);
+  background: var(--white);
+  padding: 3rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.animated-symbol-showcase { max-width: 50%; }
+
 /* ─── Mobile ───────────────────────────────────────────────── */
 :root { --mob-pad: 1.25rem; }
 
@@ -984,6 +1001,9 @@ a:hover { text-decoration: underline; }
   .section-title { font-size: 1.25rem; }
   .section-desc { font-size: .875rem; }
 
+  /* Prevent horizontal overflow */
+  .main { overflow-x: hidden; }
+
   /* Grids */
   .mockup-grid.cols-2,
   .mockup-grid.cols-3,
@@ -993,9 +1013,26 @@ a:hover { text-decoration: underline; }
   .logo-grid,
   .symbol-grid { grid-template-columns: 1fr; }
 
+  .placement-grid { grid-template-columns: repeat(2, 1fr); }
+
   .swatch-grid { grid-template-columns: repeat(2, 1fr); }
 
   .do-dont { grid-template-columns: 1fr; }
+
+  /* Co-branding box */
+  .cobrand-box {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem var(--mob-pad);
+    align-items: flex-start;
+  }
+
+  /* Animated symbol — full width on mobile */
+  .animated-symbol-showcase { max-width: 100%; }
+
+  /* Logo showcase inner — less padding */
+  .logo-showcase-inner { padding: 2rem 1.25rem; }
+  .logo-showcase-inner.pad-large { padding: 2.5rem 1.25rem; }
 
   /* Type scale */
   .type-row { flex-direction: column; gap: .75rem; }
