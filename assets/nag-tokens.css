@@ -1,0 +1,68 @@
+/**
+ * Nordic Access Group — Design Tokens
+ * Version: 1.0
+ *
+ * Kopiera dessa variabler till ditt projekts CSS för att
+ * hålla implementationen i linje med varumärket.
+ */
+
+:root {
+
+  /* ─── Färg ─────────────────────────────────────── */
+
+  /* Primärpalett */
+  --nag-kol:            #000000;  /* CMYK: 60.40.40.100 */
+  --nag-gron-gra:       #929781;  /* CMYK: 40.25.45.20  */
+  --nag-pistage:        #D4E3A2;  /* CMYK: 18.0.40.0    */
+  --nag-ljus-pistage:   #F6FFD9;  /* CMYK: 5.0.20.0     */
+
+  /* Stödpalett */
+  --nag-vit:            #ffffff;
+  --nag-ljusgra:        #d8d8d0;
+  --nag-mellangra:      #6b6b60;
+  --nag-bg:             #f7f7f5;  /* Sidans bakgrundsfärg */
+
+  /* Funktionsfärger */
+  --nag-success:        #2d6a3f;
+  --nag-error:          #b5392a;
+  --nag-warning:        #c8a020;
+
+
+  /* ─── Typografi ────────────────────────────────── */
+
+  --nag-font-display:   'GD Serio', Georgia, 'Times New Roman', serif;
+  --nag-font-body:      'GD Grio', 'Segoe UI', system-ui, sans-serif;
+  --nag-font-mono:      'Courier New', monospace;
+
+  /* Typskala */
+  --nag-text-display:   3rem;       /* 48px — GD Serio Regular */
+  --nag-text-h1:        2.25rem;    /* 36px — GD Serio Regular */
+  --nag-text-h2:        1.375rem;   /* 22px — GD Grio Semibold */
+  --nag-text-h3:        1.125rem;   /* 18px — GD Grio Semibold */
+  --nag-text-ingress:   1.125rem;   /* 18px — GD Serio Regular */
+  --nag-text-body:      1rem;       /* 16px — GD Grio Regular  */
+  --nag-text-label:     0.6875rem;  /* 11px — GD Grio Semibold, uppercase */
+  --nag-text-caption:   0.75rem;    /* 12px — GD Grio Regular  */
+
+  /* Radavstånd */
+  --nag-leading-tight:  1.1;
+  --nag-leading-snug:   1.3;
+  --nag-leading-normal: 1.7;
+  --nag-leading-loose:  1.85;
+
+
+  /* ─── Spacing ──────────────────────────────────── */
+  /* Baseras på 4px-enhet */
+
+  --nag-space-1:   0.25rem;   /*   4px */
+  --nag-space-2:   0.5rem;    /*   8px */
+  --nag-space-3:   0.75rem;   /*  12px */
+  --nag-space-4:   1rem;      /*  16px */
+  --nag-space-6:   1.5rem;    /*  24px */
+  --nag-space-8:   2rem;      /*  32px */
+  --nag-space-12:  3rem;      /*  48px */
+  --nag-space-16:  4rem;      /*  64px */
+  --nag-space-24:  6rem;      /*  96px */
+  --nag-space-32:  8rem;      /* 128px */
+
+}

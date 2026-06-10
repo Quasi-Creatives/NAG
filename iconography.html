@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ikonografi — Nordic Access Group</title>
+  <link rel="stylesheet" href="assets/style.css?v=6" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-announcement">
+    Välkommen till Nordic Access Groups varumärkesplattform, här hittar du hur och vad vi kommunicerar!
+  </div>
+  <div class="header-inner">
+    <a href="index.html" class="header-logo">
+      <img src="assets/logos/NAG-logo_primär-svart.svg" alt="Nordic Access Group">
+      <span class="header-logo-label">Varumärkesplattform</span>
+    </a>
+    <nav class="header-nav">
+      <a href="#">Press</a>
+      <a href="#">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="sidebar">
+    <div class="nav-group">
+      <div class="nav-group-label">Kom igång</div>
+      <a href="index.html">Översikt</a>
+      <a href="principles.html">Varumärkesprinciper</a>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-label">Visuell identitet</div>
+      <a href="logo.html">Logotyp</a>
+      <a href="color.html">Färg</a>
+      <a href="typography.html">Typografi</a>
+      <a href="spacing.html">Spacing</a>
+      <a href="iconography.html" class="active">Ikonografi</a>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-label">UI-komponenter</div>
+      <a href="components.html">Knappar</a>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-label">Röst</div>
+      <a href="voice.html">Tonalitet &amp; röst</a>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-hero" style="background-image: url('assets/images/NAG-BG-fabric.png'); background-position: center;">
+      <div class="category">Visuell identitet</div>
+      <h1>Ikonografi</h1>
+      <p>Ikoner stödjer kommunikation — de ersätter den inte. Vår ikonstil är ren, geometrisk och ändamålsenlig.</p>
+    </div>
+
+    <div class="page-body">
+
+      <div class="section">
+        <h2 class="section-title">Ikonstil</h2>
+        <p class="section-desc">NAG använder en enlinjetjocklek outlined-ikonstil. Alla ikoner ritas på ett 24×24px-rutnät med 1,5px stroke. Hörn använder 2px-radie för ett omtänksamt, inte kallt, utseende.</p>
+        <table class="token-table">
+          <thead>
+            <tr><th>Egenskap</th><th>Värde</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Rutnät</td><td>24×24px</td></tr>
+            <tr><td>Stroksvikt</td><td>1.5px</td></tr>
+            <tr><td>Stil</td><td>Outlined (ingen fyllning)</td></tr>
+            <tr><td>Hörnradie</td><td>2px</td></tr>
+            <tr><td>Capstil</td><td>Rund</td></tr>
+            <tr><td>Rekommenderat bibliotek</td><td>Phosphor Icons (Light-vikt) — eller motsvarande</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Storlekar</h2>
+        <p class="section-desc">Ikoner får bara användas i dessa storlekar. Skala aldrig till ett mellenvärde.</p>
+        <table class="token-table">
+          <thead>
+            <tr><th>Storlek</th><th>Användningsfall</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>16px</td><td>Inlinedikoner i text, tabellåtgärder, kompakt UI</td></tr>
+            <tr><td>20px</td><td>Navigationsobjekt, knappdikoner</td></tr>
+            <tr><td>24px</td><td>Standard / default ikonstorlek</td></tr>
+            <tr><td>32px</td><td>Funktionslyft, kort</td></tr>
+            <tr><td>48px</td><td>Hjälteillustration, tomma tillstånd</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Färganvändning</h2>
+        <table class="token-table">
+          <thead>
+            <tr><th>Kontext</th><th>Ikonfärg</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>På vit / ljus bakgrund</td><td>NAG Svart <code>#0d0d0b</code> eller Grå <code>#6b6860</code></td></tr>
+            <tr><td>På mörk / svart bakgrund</td><td>Vit <code>#ffffff</code> eller Olivgrön ljus <code>#d4dbc8</code></td></tr>
+            <tr><td>Interaktivt / länkikon</td><td>Olivgrön <code>#4a5e3a</code></td></tr>
+            <tr><td>Inaktiverat tillstånd</td><td>Grå border <code>#d6d3cc</code></td></tr>
+            <tr><td>Framgång / fel / varning</td><td>Matchande funktionsfärg</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Användningsregler</h2>
+        <div class="do-dont">
+          <div class="do-box">
+            <div class="tag">Gör så</div>
+            <ul>
+              <li>Para ikoner med synlig textetikett där utrymme finns</li>
+              <li>Använd en enda ikonstil i ett gränssnitt</li>
+              <li>Håll ikoner pixeljusterade vid små storlekar</li>
+              <li>Använd SVG-format för alla digitala placeringar</li>
+            </ul>
+          </div>
+          <div class="dont-box">
+            <div class="tag">Gör inte så</div>
+            <ul>
+              <li>Blanda outlined och filled-ikoner i samma kontext</li>
+              <li>Använd ikoner som dekoration utan funktionell mening</li>
+              <li>Lägg till skuggor eller gradienter på ikoner</li>
+              <li>Rotera ikoner för att skapa ny betydelse</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Tillgänglighet</h2>
+        <div class="callout">Varje ikon som används utan synlig etikett måste ha ett tillgängligt <code>aria-label</code> eller paras med visuellt dold text. Förlita dig aldrig på en ikon ensam för att förmedla kritisk information.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="page-footer">Nordic Access Group Varumärkesspråk — Internt bruk</footer>
+</body>
+</html>

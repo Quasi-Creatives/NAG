@@ -1,0 +1,880 @@
+/* ─── Fonts ────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'GD Grio';
+  src: url('fonts/GDGrio-Regular.woff2') format('woff2'),
+       url('fonts/GDGrio-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GD Grio';
+  src: url('fonts/GDGrio-Medium.woff2') format('woff2'),
+       url('fonts/GDGrio-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GD Grio';
+  src: url('fonts/GDGrio-Semibold.woff2') format('woff2'),
+       url('fonts/GDGrio-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GD Serio';
+  src: url('fonts/GDSerio-Text.woff2') format('woff2'),
+       url('fonts/GDSerio-Text.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Reset & Base ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* NAG officiell färgpalett */
+  --black:      #000000;   /* Kol */
+  --dark:       #111111;   /* Kol mjukad för sidebar */
+  --olive:      #929781;   /* Grön-grå */
+  --olive-mid:  #b5ba9e;   /* Grön-grå ljusare */
+  --olive-light:#D4E3A2;   /* Pistage */
+  --cream:      #f7f7f5;   /* Neutral ljusgrå — sidans bakgrund */
+  --cream-mid:  #efefec;   /* Lätt mörkare neutral för kortytor */
+  --pistage:    #D4E3A2;   /* Pistage */
+  --pistage-box:#dde8b1;   /* Pistage box (logotypfil) */
+  --white:      #ffffff;
+  --gray-20:    #d8d8d0;
+  --gray-40:    #a8a89a;
+  --gray-60:    #6b6b60;
+  --gray-80:    #3a3a30;
+  --text-dark:  #000000;
+
+  --sidebar-w:  260px;
+  --header-h:   56px;
+
+  --font-display: 'GD Serio', Georgia, 'Times New Roman', serif;
+  --font-body:    'GD Grio', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font: var(--font-body);
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  color: var(--text-dark);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+a { color: var(--olive); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ─── Header ───────────────────────────────────────────────── */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-20);
+}
+
+/* Top announcement bar */
+.header-announcement {
+  background: var(--pistage);
+  text-align: center;
+  padding: .5rem 2rem;
+  font-family: var(--font-body);
+  font-size: .8125rem;
+  color: var(--black);
+  letter-spacing: .01em;
+  line-height: 1.4;
+}
+
+/* Main header row */
+.header-inner {
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.header-logo img {
+  height: 22px;
+  width: auto;
+  display: block;
+}
+
+.header-logo-label {
+  font-family: var(--font-body);
+  font-size: .875rem;
+  font-weight: 400;
+  color: var(--gray-60);
+  margin-left: .875rem;
+  letter-spacing: .01em;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.header-nav a {
+  font-family: var(--font-body);
+  font-size: .875rem;
+  color: var(--gray-60);
+  text-decoration: none;
+  padding: .25rem .875rem;
+  letter-spacing: .01em;
+  transition: color .15s;
+  white-space: nowrap;
+}
+
+.header-nav a:hover { color: var(--black); text-decoration: none; }
+.header-nav a.active { color: var(--black); font-weight: 500; }
+
+/* ─── Layout ───────────────────────────────────────────────── */
+.layout {
+  display: flex;
+  padding-top: calc(var(--header-h) + 34px); /* header + announcement bar */
+  min-height: 100vh;
+}
+
+/* ─── Sidebar ──────────────────────────────────────────────── */
+.sidebar {
+  position: fixed;
+  top: calc(var(--header-h) + 34px); left: 0;
+  width: var(--sidebar-w);
+  height: calc(100vh - var(--header-h));
+  overflow-y: auto;
+  background: var(--dark);
+  border-right: 1px solid rgba(255,255,255,.06);
+  padding: 2rem 0 4rem;
+}
+
+.nav-group { margin-bottom: 2.5rem; }
+
+.nav-group-label {
+  font-size: .625rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.4);
+  padding: 0 1.5rem .5rem;
+}
+
+.nav-group a {
+  display: block;
+  padding: .5rem 1.5rem;
+  font-size: .8125rem;
+  color: rgba(255,255,255,.7);
+  border-left: 2px solid transparent;
+  letter-spacing: .01em;
+  transition: background .15s, color .15s, border-color .15s;
+}
+
+.nav-group a:hover {
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.95);
+  text-decoration: none;
+}
+
+.nav-group a.active {
+  border-left-color: var(--olive-light);
+  background: rgba(74,94,58,.15);
+  color: var(--olive-light);
+  font-weight: 500;
+}
+
+/* ─── Main Content ─────────────────────────────────────────── */
+.main {
+  margin-left: var(--sidebar-w);
+  flex: 1;
+  min-width: 0;
+}
+
+/* ─── Page Hero ────────────────────────────────────────────── */
+/*
+ * To add a photo: set background-image on the .page-hero element
+ * Example: <div class="page-hero" style="background-image: url('assets/images/your-photo.jpg')">
+ */
+.page-hero {
+  background-color: var(--black);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 5rem 4rem 4.5rem;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark gradient overlay — keeps text readable over any photo */
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(0,0,0,.80) 0%,
+    rgba(0,0,0,.55) 55%,
+    rgba(0,0,0,.30) 100%
+  );
+  z-index: 0;
+}
+
+.page-hero > * { position: relative; z-index: 1; }
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pistage) 0%, transparent 70%);
+  z-index: 2;
+}
+
+/* ─── Per-page hero backgrounds ───────────────────────────────
+ * Replace the gradient with background-image: url(...) on each
+ * .page-hero element when real photos are available.
+ * --------------------------------------------------------------- */
+.hero-bg-overview {
+  background-image: linear-gradient(135deg, #1a1a14 0%, #2d2d20 40%, #1a1a14 100%);
+}
+.hero-bg-principles {
+  background-image: linear-gradient(135deg, #111209 0%, #252818 50%, #111209 100%);
+}
+.hero-bg-logo {
+  background-image: linear-gradient(120deg, #0a0a0a 0%, #1e1e1a 60%, #0a0a0a 100%);
+}
+.hero-bg-color {
+  background-image: linear-gradient(135deg, #0e110a 0%, #1e2414 50%, #0e110a 100%);
+}
+.hero-bg-typography {
+  background-image: linear-gradient(150deg, #0d0d0b 0%, #1c1c18 55%, #0d0d0b 100%);
+}
+.hero-bg-spacing {
+  background-image: linear-gradient(120deg, #111111 0%, #1a1a14 50%, #111111 100%);
+}
+.hero-bg-iconography {
+  background-image: linear-gradient(140deg, #0c0c0a 0%, #1b1b16 55%, #0c0c0a 100%);
+}
+.hero-bg-components {
+  background-image: linear-gradient(130deg, #0f0f0d 0%, #1d1d18 50%, #0f0f0d 100%);
+}
+.hero-bg-voice {
+  background-image: linear-gradient(145deg, #0d0d0b 0%, #1a1a12 55%, #0d0d0b 100%);
+}
+
+.page-hero .category {
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--pistage);
+  margin-bottom: 1rem;
+}
+
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: 3.25rem;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -.01em;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+.page-hero p {
+  font-size: 1.0625rem;
+  color: rgba(255,255,255,.65);
+  max-width: 560px;
+  line-height: 1.75;
+}
+
+/* ─── Page Body ────────────────────────────────────────────── */
+.page-body {
+  padding: 4rem;
+  max-width: 1080px;
+  background: var(--cream);
+}
+
+/* ─── Section ──────────────────────────────────────────────── */
+.section { margin-bottom: 4.5rem; }
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  margin-bottom: .5rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid var(--gray-20);
+  color: var(--text-dark);
+}
+
+.section-desc {
+  font-size: .9375rem;
+  color: var(--gray-60);
+  max-width: 640px;
+  margin-bottom: 2rem;
+  line-height: 1.75;
+}
+
+/* ─── Color Swatches ───────────────────────────────────────── */
+.swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 1rem;
+}
+
+.swatch {
+  border: none;
+  border-radius: 1px;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.swatch-block {
+  height: 96px;
+  width: 100%;
+}
+
+.swatch-info {
+  padding: .75rem 1rem;
+  background: var(--white);
+}
+
+.swatch-name {
+  font-size: .8125rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: .15rem;
+}
+
+.swatch-hex {
+  font-size: .75rem;
+  color: var(--gray-60);
+  font-family: 'Courier New', monospace;
+}
+
+.swatch-role {
+  font-size: .6875rem;
+  color: var(--gray-40);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin-top: .25rem;
+}
+
+/* ─── Type Scale ───────────────────────────────────────────── */
+.type-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--gray-20);
+}
+
+.type-meta {
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.type-meta .label {
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gray-40);
+}
+
+.type-meta .specs {
+  font-size: .75rem;
+  color: var(--text-dark);
+  margin-top: .25rem;
+  font-family: 'Courier New', monospace;
+  line-height: 1.7;
+}
+
+.type-preview { flex: 1; }
+
+/* ─── Spacing Scale ────────────────────────────────────────── */
+.spacing-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: .75rem 0;
+  border-bottom: 1px solid var(--gray-20);
+}
+
+.spacing-bar-wrap { width: 200px; }
+
+.spacing-bar {
+  height: 10px;
+  background: var(--olive);
+  border-radius: 1px;
+}
+
+.spacing-meta {
+  display: flex;
+  gap: 2rem;
+}
+
+.spacing-token {
+  font-size: .8125rem;
+  font-family: 'Courier New', monospace;
+  color: var(--text-dark);
+  font-weight: 600;
+  width: 100px;
+}
+
+.spacing-value {
+  font-size: .8125rem;
+  color: var(--gray-60);
+  font-family: 'Courier New', monospace;
+}
+
+.spacing-use {
+  font-size: .8125rem;
+  color: var(--gray-60);
+}
+
+/* ─── Principle Cards ──────────────────────────────────────── */
+.principle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1px;
+  background: var(--gray-20);
+  border: 1px solid var(--gray-20);
+}
+
+.principle-card {
+  background: var(--white);
+  padding: 2rem;
+  border-top: 3px solid transparent;
+  transition: border-color .2s;
+}
+
+.principle-card:hover {
+  border-top-color: var(--olive);
+}
+
+.principle-number {
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-bottom: .75rem;
+}
+
+.principle-title {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: .75rem;
+  color: var(--text-dark);
+  letter-spacing: -.01em;
+}
+
+.principle-body {
+  font-size: .875rem;
+  color: var(--gray-60);
+  line-height: 1.7;
+}
+
+/* ─── Do / Don't ───────────────────────────────────────────── */
+.do-dont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.do-box, .dont-box {
+  padding: 1.5rem;
+  border-top: 3px solid;
+}
+
+.do-box   { border-color: var(--olive); background: #edf2e8; }
+.dont-box { border-color: #b5392a; background: #f9edeb; }
+
+.do-box   .tag { color: var(--olive); font-size: .625rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .5rem; }
+.dont-box .tag { color: #b5392a; font-size: .625rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .5rem; }
+
+.do-box ul, .dont-box ul {
+  list-style: none;
+  font-size: .875rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+
+.do-box li::before   { content: '✓  '; color: var(--olive); font-weight: 700; }
+.dont-box li::before { content: '✗  '; color: #b5392a; font-weight: 700; }
+
+/* ─── Logo Spec ────────────────────────────────────────────── */
+.logo-display {
+  background: var(--cream-mid);
+  border: 1px solid var(--gray-20);
+  padding: 4rem 3rem;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.logo-display.dark-bg {
+  background: var(--black);
+}
+
+.logo-wordmark {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+.logo-wordmark .accent { color: var(--olive); }
+
+.spec-list {
+  list-style: none;
+  border: 1px solid var(--gray-20);
+  background: var(--white);
+}
+
+.spec-list li {
+  display: flex;
+  gap: 1rem;
+  padding: .75rem 1rem;
+  border-bottom: 1px solid var(--gray-20);
+  font-size: .875rem;
+}
+
+.spec-list li:last-child { border-bottom: none; }
+
+.spec-key {
+  width: 160px;
+  flex-shrink: 0;
+  font-weight: 600;
+  color: var(--gray-60);
+  font-size: .8125rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+/* ─── Callout ──────────────────────────────────────────────── */
+.callout {
+  background: var(--white);
+  border-left: 3px solid var(--olive);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: .9375rem;
+  color: var(--gray-60);
+  line-height: 1.7;
+}
+
+/* ─── Token Table ──────────────────────────────────────────── */
+.token-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .875rem;
+  margin-top: 1.5rem;
+  background: var(--white);
+}
+
+.token-table th {
+  text-align: left;
+  padding: .625rem 1rem;
+  background: var(--dark);
+  border: 1px solid rgba(255,255,255,.06);
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+}
+
+.token-table td {
+  padding: .75rem 1rem;
+  border: 1px solid var(--gray-20);
+  vertical-align: middle;
+  color: var(--text-dark);
+}
+
+.token-table tr:nth-child(even) td {
+  background: var(--cream);
+}
+
+.token-table td code {
+  font-family: 'Courier New', monospace;
+  font-size: .8125rem;
+  background: var(--cream-mid);
+  padding: .1rem .4rem;
+  border-radius: 2px;
+  color: var(--olive);
+}
+
+.token-table a {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.token-table a:hover { color: var(--olive); text-decoration: none; }
+
+/* ─── Tag chip ─────────────────────────────────────────────── */
+.tag-chip {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .2rem .6rem;
+  border-radius: 1px;
+  margin-bottom: .5rem;
+}
+
+/* ─── Dark section variant ─────────────────────────────────── */
+.section-dark {
+  background: var(--dark);
+  color: white;
+  padding: 4rem;
+  margin: 0 -4rem 4.5rem;
+}
+
+.section-dark .section-title {
+  color: white;
+  border-bottom-color: rgba(255,255,255,.1);
+}
+
+.section-dark .section-desc {
+  color: rgba(255,255,255,.55);
+}
+
+/* ─── NAG Buttons ─────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  padding: .875rem 2rem;
+  border-radius: 2px;
+  transition: border-radius .2s ease, background .15s ease, color .15s ease;
+  white-space: nowrap;
+}
+
+/* Primär — Pistage fyllning, svart text */
+.btn-primary {
+  background: var(--pistage);
+  color: var(--black);
+  border: 2px solid transparent;
+}
+
+.btn-primary:hover {
+  border-radius: 5px;
+  background: var(--pistage);
+  color: var(--black);
+  text-decoration: none;
+}
+
+/* Sekundär — Vit outline, vit text */
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+  border-radius: 5px;
+  background: transparent;
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* Sekundär mörk — Svart outline, svart text (för ljus bakgrund) */
+.btn-secondary-dark {
+  background: transparent;
+  color: var(--black);
+  border: 2px solid var(--black);
+}
+
+.btn-secondary-dark:hover {
+  border-radius: 5px;
+  background: transparent;
+  color: var(--black);
+  text-decoration: none;
+}
+
+/* ─── Component demo block ─────────────────────────────────── */
+.component-demo {
+  border: 1px solid var(--gray-20);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.component-demo-canvas {
+  padding: 3rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.component-demo-label {
+  padding: .6rem 1.25rem;
+  background: var(--gray-20);
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gray-60);
+}
+
+.component-spec {
+  margin-top: 1.5rem;
+}
+
+/* ─── Download button — uses NAG primary button style ──────── */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: var(--font-body);
+  font-size: .875rem;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  padding: .625rem 1.25rem;
+  border-radius: 2px;
+  transition: border-radius .2s ease, background .15s ease;
+  white-space: nowrap;
+  background: var(--pistage);
+  color: var(--black);
+  border: 2px solid transparent;
+}
+
+.download-btn:hover {
+  border-radius: 5px;
+  background: var(--pistage);
+  color: var(--black);
+  text-decoration: none;
+}
+
+.download-btn svg {
+  flex-shrink: 0;
+}
+
+.download-row {
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+  padding: .875rem 1.25rem;
+  background: var(--white);
+  border-top: 1px solid var(--gray-20);
+}
+
+.download-row-label {
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gray-40);
+}
+
+.download-row .download-btn {
+  align-self: flex-start;
+}
+
+.download-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ─── Footer ───────────────────────────────────────────────── */
+.page-footer {
+  margin-left: var(--sidebar-w);
+  padding: 1.5rem 4rem;
+  background: var(--dark);
+  font-size: .75rem;
+  color: rgba(255,255,255,.25);
+  letter-spacing: .04em;
+}
+
+/* ─── Mockup Grid ──────────────────────────────────────────── */
+.mockup-section {
+  margin-bottom: 4.5rem;
+}
+
+.mockup-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.mockup-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.mockup-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.mockup-grid.cols-1-2 { grid-template-columns: 1fr 2fr; }
+.mockup-grid.cols-2-1 { grid-template-columns: 2fr 1fr; }
+
+.mockup-item {
+  position: relative;
+  overflow: hidden;
+  background: var(--gray-10);
+  border: 1px solid var(--gray-20);
+}
+
+.mockup-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mockup-item.tall { aspect-ratio: 3/4; }
+.mockup-item.wide { aspect-ratio: 16/7; }
+.mockup-item.square { aspect-ratio: 1/1; }
+.mockup-item.natural img { height: auto; }
+
+.mockup-caption {
+  margin-top: .6rem;
+  font-size: .75rem;
+  color: var(--gray-60);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.mockup-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: .75rem 1rem;
+  background: rgba(0,0,0,.45);
+  color: rgba(255,255,255,.8);
+  font-size: .7rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+}

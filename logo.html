@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logotyp — Nordic Access Group</title>
+  <link rel="stylesheet" href="assets/style.css?v=6" />
+  <style>
+    .logo-showcase {
+      border: 1px solid var(--gray-20);
+      overflow: hidden;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .logo-showcase-inner {
+      padding: 3rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
+    .logo-showcase-inner img { max-width: 100%; height: auto; }
+    .logo-showcase-inner.pad-large { padding: 4rem 3rem; }
+    .logo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .logo-grid .logo-showcase { margin-bottom: 0; }
+    .symbol-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .symbol-grid .logo-showcase { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-announcement">
+    Välkommen till Nordic Access Groups varumärkesplattform, här hittar du hur och vad vi kommunicerar!
+  </div>
+  <div class="header-inner">
+    <a href="index.html" class="header-logo">
+      <img src="assets/logos/NAG-logo_primär-svart.svg" alt="Nordic Access Group">
+      <span class="header-logo-label">Varumärkesplattform</span>
+    </a>
+    <nav class="header-nav">
+      <a href="#">Press</a>
+      <a href="#">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="sidebar">
+    <div class="nav-group">
+      <div class="nav-group-label">Kom igång</div>
+      <a href="index.html">Översikt</a>
+      <a href="principles.html">Varumärkesprinciper</a>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-label">Visuell identitet</div>
+      <a href="logo.html" class="active">Logotyp</a>
+      <a href="color.html">Färg</a>
+      <a href="typography.html">Typografi</a>
+      <a href="spacing.html">Spacing</a>
+      <a href="iconography.html">Ikonografi</a>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-label">UI-komponenter</div>
+      <a href="components.html">Knappar</a>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-label">Röst</div>
+      <a href="voice.html">Tonalitet &amp; röst</a>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="page-hero" style="background-image: url('assets/images/NAG-BG-fabric.png'); background-position: center;">
+      <div class="category">Visuell identitet</div>
+      <h1>Logotyp</h1>
+      <p>Logotypen är vår mest igenkännbara tillgång. Använd den korrekt, varje gång.</p>
+    </div>
+
+    <div class="page-body">
+
+      <div class="section">
+        <h2 class="section-title">Namnregel</h2>
+        <div class="callout">Skriv alltid <strong>Nordic Access Group</strong> — aldrig förkortningen NAG — i externa sammanhang där logotypen visas. NAG används i löpande text och internt.</div>
+      </div>
+
+      <!-- SAFEZONE -->
+      <div class="section">
+        <h2 class="section-title">Frizon</h2>
+        <p class="section-desc">Frizonen är symbolens höjd (X) och ska alltid hållas fri på alla fyra sidor — oavsett storlek och kontext.</p>
+
+        <!-- Frizon-diagram: X utanför den streckade rutan -->
+        <div style="border: 1px solid var(--gray-20); background: var(--white); padding: 3.5rem 3rem 2.5rem; margin-bottom: 1.5rem;">
+          <div style="display: flex; align-items: center; justify-content: center;">
+            <div style="position: relative; display: inline-block;">
+
+              <!-- X ovan -->
+              <div style="text-align: center; font-size: .75rem; font-style: italic; color: var(--olive); margin-bottom: .4rem; letter-spacing: .04em;">x</div>
+
+              <div style="display: flex; align-items: center;">
+                <!-- X vänster -->
+                <div style="font-size: .75rem; font-style: italic; color: var(--olive); margin-right: .4rem; letter-spacing: .04em;">x</div>
+
+                <!-- Streckad frizonram + logotyp -->
+                <div style="border: 1.5px dashed var(--olive-mid); padding: 1.25rem 2rem;">
+                  <img src="assets/logos/NAG-logo_primär-svart.svg" alt="Nordic Access Group" style="height: 32px; width: auto; display: block;">
+                </div>
+
+                <!-- X höger -->
+                <div style="font-size: .75rem; font-style: italic; color: var(--olive); margin-left: .4rem; letter-spacing: .04em;">x</div>
+              </div>
+
+              <!-- X nedan -->
+              <div style="text-align: center; font-size: .75rem; font-style: italic; color: var(--olive); margin-top: .4rem; letter-spacing: .04em;">x</div>
+            </div>
+          </div>
+
+          <!-- Legend -->
+          <div style="display: flex; align-items: center; justify-content: center; gap: .625rem; margin-top: 2rem;">
+            <div style="width: 28px; border-top: 1.5px dashed var(--olive-mid);"></div>
+            <span style="font-size: .8125rem; color: var(--gray-60);">= Frizon (X = symbolens höjd)</span>
+          </div>
+        </div>
+
+        <!-- Placeringsexempel -->
+        <h2 class="section-title" style="margin-top: 2.5rem;">Placeringsexempel</h2>
+        <p class="section-desc">Logotypen kan placeras i alla hörn och centrerat — välj utifrån layout. Håll alltid frizonen fri.</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+
+          <!-- Övre vänster -->
+          <div style="border: 1px solid var(--gray-20); background: var(--cream-mid); aspect-ratio: 16/9; position: relative; overflow: hidden;">
+            <img src="assets/logos/NAG-logo_primär-svart.svg" style="position: absolute; top: 1rem; left: 1rem; height: 16px; width: auto;">
+            <span style="position: absolute; bottom: .5rem; left: .75rem; font-size: .5625rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gray-40);">Övre vänster</span>
+          </div>
+
+          <!-- Övre höger -->
+          <div style="border: 1px solid var(--gray-20); background: var(--cream-mid); aspect-ratio: 16/9; position: relative; overflow: hidden;">
+            <img src="assets/logos/NAG-logo_primär-svart.svg" style="position: absolute; top: 1rem; right: 1rem; height: 16px; width: auto;">
+            <span style="position: absolute; bottom: .5rem; left: .75rem; font-size: .5625rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gray-40);">Övre höger</span>
+          </div>
+
+          <!-- Centrerat -->
+          <div style="border: 1px solid var(--gray-20); background: var(--cream-mid); aspect-ratio: 16/9; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <img src="assets/logos/NAG-logo_primär-svart.svg" style="height: 16px; width: auto;">
+            <span style="position: absolute; bottom: .5rem; left: .75rem; font-size: .5625rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gray-40);">Centrerat</span>
+          </div>
+
+          <!-- Nedre vänster -->
+          <div style="border: 1px solid var(--gray-20); background: var(--black); aspect-ratio: 16/9; position: relative; overflow: hidden;">
+            <img src="assets/logos/NAG-logo-01.svg" style="position: absolute; bottom: 1rem; left: 1rem; height: 16px; width: auto;">
+            <span style="position: absolute; top: .5rem; left: .75rem; font-size: .5625rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.35);">Nedre vänster</span>
+          </div>
+
+          <!-- Nedre höger -->
+          <div style="border: 1px solid var(--gray-20); background: var(--black); aspect-ratio: 16/9; position: relative; overflow: hidden;">
+            <img src="assets/logos/NAG-logo-01.svg" style="position: absolute; bottom: 1rem; right: 1rem; height: 16px; width: auto;">
+            <span style="position: absolute; top: .5rem; left: .75rem; font-size: .5625rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.35);">Nedre höger</span>
+          </div>
+
+          <!-- Centrerat mörk -->
+          <div style="border: 1px solid var(--gray-20); background: var(--black); aspect-ratio: 16/9; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <img src="assets/logos/NAG-logo-01.svg" style="height: 16px; width: auto;">
+            <span style="position: absolute; top: .5rem; left: .75rem; font-size: .5625rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.35);">Centrerat mörk</span>
+          </div>
+
+        </div>
+
+        <!-- Co-branding -->
+        <h2 class="section-title" style="margin-top: 2.5rem;">Samplacering med annan logotyp</h2>
+        <p class="section-desc">När NAGs logotyp visas tillsammans med en partner eller delad avsändare separeras de med ett vertikalt streck. NAG placeras alltid till vänster. Partnern har samma visuella vikt som NAG — varken större eller mindre.</p>
+
+        <div style="border: 1px solid var(--gray-20); background: var(--white); padding: 3rem 2.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 2.5rem;">
+          <!-- NAG logo -->
+          <img src="assets/logos/NAG-logo_primär-svart.svg" alt="Nordic Access Group" style="height: 28px; width: auto;">
+          <!-- Separator -->
+          <div style="width: 1px; height: 48px; background: var(--gray-20);"></div>
+          <!-- Partner placeholder -->
+          <div style="border: 1.5px dashed var(--gray-20); padding: .75rem 2rem; display: flex; align-items: center; justify-content: center;">
+            <span style="font-size: .8125rem; color: var(--gray-40); white-space: nowrap;">Partnerlogotyp</span>
+          </div>
+        </div>
+
+        <div class="callout">NAG placeras alltid till vänster om separatorn. Partnerlogotypen ska ha samma höjd som NAGs ordmärke — justera inte NAGs storlek för att matcha en partners.</div>
+
+      </div>
+
+      <!-- PRIMÄR -->
+      <div class="section">
+        <div class="download-section-header">
+          <h2 class="section-title" style="border:none; padding:0; margin:0;">Primär logotyp</h2>
+        </div>
+        <p class="section-desc">Den primära logotypen är den horisontella varianten med symbol och ordmärke. Används i de flesta sammanhang.</p>
+
+        <div class="logo-showcase">
+          <div class="logo-showcase-inner pad-large" style="background: var(--cream-mid);">
+            <img src="assets/logos/NAG-logo_primär-svart.svg" alt="Nordic Access Group primär logotyp, svart" style="max-width: 480px;">
+          </div>
+          <div class="download-row">
+            <span class="download-row-label">Primär — Ljus bakgrund</span>
+            <a href="assets/logos/NAG-logo_primär-svart.svg" download="NAG-logo_primär-svart.svg" class="download-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Ladda ner SVG
+            </a>
+          </div>
+        </div>
+
+        <div class="logo-showcase">
+          <div class="logo-showcase-inner pad-large" style="background: var(--black);">
+            <img src="assets/logos/NAG-logo-01.svg" alt="Nordic Access Group primär logotyp, vit" style="max-width: 480px;">
+          </div>
+          <div class="download-row">
+            <span class="download-row-label">Primär — Mörk bakgrund</span>
+            <a href="assets/logos/NAG-logo-01.svg" download="NAG-logo_primär-vit.svg" class="download-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Ladda ner SVG
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEKUNDÄR -->
+      <div class="section">
+        <h2 class="section-title">Sekundär logotyp (stående)</h2>
+        <p class="section-desc">Den stående varianten används vid kvadratiska ytor, sociala medier, tryck och situationer där bredden är begränsad.</p>
+
+        <div class="logo-grid">
+          <div class="logo-showcase">
+            <div class="logo-showcase-inner" style="background: var(--cream-mid);">
+              <img src="assets/logos/NAG-logo_sekundär-svart.svg" alt="Sekundär svart" style="max-width: 220px;">
+            </div>
+            <div class="download-row">
+              <span class="download-row-label">Sekundär — Ljus</span>
+              <a href="assets/logos/NAG-logo_sekundär-svart.svg" download="NAG-logo_sekundär-svart.svg" class="download-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Ladda ner SVG
+              </a>
+            </div>
+          </div>
+          <div class="logo-showcase">
+            <div class="logo-showcase-inner" style="background: var(--black);">
+              <img src="assets/logos/NAG-logo_sekundär-vit.svg" alt="Sekundär vit" style="max-width: 220px;">
+            </div>
+            <div class="download-row">
+              <span class="download-row-label">Sekundär — Mörk</span>
+              <a href="assets/logos/NAG-logo_sekundär-vit.svg" download="NAG-logo_sekundär-vit.svg" class="download-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Ladda ner SVG
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SYMBOL -->
+      <div class="section">
+        <h2 class="section-title">Symbolen</h2>
+        <p class="section-desc">Symbolen (de tre stegen) används ensam vid favicon, app-ikon, profilbild och vattenstämpel.</p>
+
+        <!-- Rad 1: Friståande symbol, 2 kolumner -->
+        <div class="logo-grid" style="margin-bottom: 1rem;">
+          <div class="logo-showcase">
+            <div class="logo-showcase-inner" style="background: var(--cream-mid); padding: 2.5rem;">
+              <img src="assets/logos/NAG-logo_symbol-svart.svg" alt="Symbol svart" style="max-width: 120px;">
+            </div>
+            <div class="download-row">
+              <span class="download-row-label">Symbol — Svart</span>
+              <a href="assets/logos/NAG-logo_symbol-svart.svg" download="NAG-logo_symbol-svart.svg" class="download-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                SVG
+              </a>
+            </div>
+          </div>
+          <div class="logo-showcase">
+            <div class="logo-showcase-inner" style="background: var(--black); padding: 2.5rem;">
+              <img src="assets/logos/NAG-logo_symbol-vit.svg" alt="Symbol vit" style="max-width: 120px;">
+            </div>
+            <div class="download-row">
+              <span class="download-row-label">Symbol — Vit</span>
+              <a href="assets/logos/NAG-logo_symbol-vit.svg" download="NAG-logo_symbol-vit.svg" class="download-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                SVG
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rad 2: Symbol i box, 3 kolumner -->
+        <div class="symbol-grid">
+          <div class="logo-showcase">
+            <div class="logo-showcase-inner" style="background: var(--cream-mid); padding: 2.5rem;">
+              <img src="assets/logos/NAG-logo_symbol-box-vit.svg" alt="Symbol box vit" style="max-width: 120px;">
+            </div>
+            <div class="download-row">
+              <span class="download-row-label">Symbol i box — Vit</span>
+              <a href="assets/logos/NAG-logo_symbol-box-vit.svg" download="NAG-logo_symbol-box-vit.svg" class="download-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                SVG
+              </a>
+            </div>
+          </div>
+          <div class="logo-showcase">
+            <div class="logo-showcase-inner" style="background: var(--cream-mid); padding: 2.5rem;">
+              <img src="assets/logos/NAG-logo_symbol-box-svart.svg" alt="Symbol box svart" style="max-width: 120px;">
+            </div>
+            <div class="download-row">
+              <span class="download-row-label">Symbol i box — Svart</span>
+              <a href="assets/logos/NAG-logo_symbol-box-svart.svg" download="NAG-logo_symbol-box-svart.svg" class="download-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                SVG
+              </a>
+            </div>
+          </div>
+          <div class="logo-showcase">
+            <div class="logo-showcase-inner" style="background: var(--cream-mid); padding: 2.5rem;">
+              <img src="assets/logos/NAG-logo_symbol-box-pistage.svg" alt="Symbol box pistage" style="max-width: 120px;">
+            </div>
+            <div class="download-row">
+              <span class="download-row-label">Symbol i box — Pistage</span>
+              <a href="assets/logos/NAG-logo_symbol-box-pistage.svg" download="NAG-logo_symbol-box-pistage.svg" class="download-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                SVG
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANIMERAD SYMBOL -->
+      <div class="section">
+        <h2 class="section-title">Animerad symbol</h2>
+        <p class="section-desc">Den animerade symbolen används i digitala sammanhang där rörelse tillför värde — intro-animationer, laddningsskärmar och sociala medier. Använd aldrig animationen på tryckt material.</p>
+
+        <div class="logo-showcase" style="max-width: 50%;">
+          <div style="overflow: hidden; line-height: 0;">
+            <img src="assets/images/NAG-logo-3.gif" alt="NAG animerad symbol" style="width: 100%; height: auto; display: block;">
+          </div>
+          <div class="download-row">
+            <span class="download-row-label">Animerad symbol — Pistage</span>
+            <a href="assets/images/NAG-logo-3.gif" download="NAG-logo-3.gif" class="download-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Ladda ner GIF
+            </a>
+          </div>
+        </div>
+
+        <div class="callout">Animationen ska spelas upp i loop. Använd inte animationen i sammanhang där rörelse kan upplevas som störande eller otillgänglig — erbjud alltid en statisk fallback.</div>
+      </div>
+
+      <!-- SPECS -->
+      <div class="section">
+        <h2 class="section-title">Specifikationer</h2>
+        <ul class="spec-list">
+          <li><span class="spec-key">Format</span> SVG (primärt), PNG med transparent bakgrund (fallback)</li>
+          <li><span class="spec-key">Minsta digital storlek</span> Primär: 200px bred — Symbol: 32px</li>
+          <li><span class="spec-key">Minsta tryckt storlek</span> Primär: 40mm bred — Symbol: 8mm</li>
+          <li><span class="spec-key">Frizon</span> Minst lika med symbolens höjd på alla sidor</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Korrekt och felaktig användning</h2>
+        <div class="do-dont">
+          <div class="do-box">
+            <div class="tag">Gör så</div>
+            <ul>
+              <li>Använd enbart nedladdade SVG-filer från det här paketet</li>
+              <li>Behåll korrekt frizon runt logotypen</li>
+              <li>Välj rätt variant för bakgrunden</li>
+              <li>Skala proportionellt</li>
+            </ul>
+          </div>
+          <div class="dont-box">
+            <div class="tag">Gör inte så</div>
+            <ul>
+              <li>Återskapa eller skriv om logotypen i annat typsnitt</li>
+              <li>Stretcha, rotera eller förvräng logotypen</li>
+              <li>Ändra färger eller ta bort delar</li>
+              <li>Lägg till skuggor, glöd eller andra effekter</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- MOCKUPS -->
+      <div class="section">
+        <h2 class="section-title">Logotypen i bruk</h2>
+        <p class="section-desc">Så här tar sig logotypen uttryck i verkliga tillämpningar — från tryckt material till fysiska ytor.</p>
+
+        <div class="mockup-grid cols-2" style="margin-bottom: 1.5rem;">
+          <div>
+            <div class="mockup-item wide">
+              <img src="assets/images/hero-building.jpg" alt="Mockup — fasad">
+            </div>
+            <p class="mockup-caption">Primär logotyp — vit på mörk yta</p>
+          </div>
+          <div>
+            <div class="mockup-item wide">
+              <img src="assets/images/NAG-BG-fabric.png" alt="Mockup — brodyr / textil">
+            </div>
+            <p class="mockup-caption">Symbol — applicering på material</p>
+          </div>
+        </div>
+
+        <div class="mockup-grid cols-3">
+          <div>
+            <div class="mockup-item square">
+              <img src="assets/images/NAG-tag.png" alt="Mockup — tag" style="object-fit: cover;">
+            </div>
+            <p class="mockup-caption">Sekundär logotyp — tryckt</p>
+          </div>
+          <div>
+            <div class="mockup-item square">
+              <img src="assets/images/hero-building.jpg" alt="Mockup — visitkort">
+            </div>
+            <p class="mockup-caption">Primär logotyp — svart på ljus yta</p>
+          </div>
+          <div>
+            <div class="mockup-item square">
+              <img src="assets/images/NAG-BG-fabric.png" alt="Mockup — profilmaterial">
+            </div>
+            <p class="mockup-caption">Symbol i pistage — digital yta</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="page-footer">Nordic Access Group Varumärkesspråk — Internt bruk</footer>
+</body>
+</html>
