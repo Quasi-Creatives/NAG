@@ -997,9 +997,26 @@ a:hover { text-decoration: underline; }
   /* Page body */
   .page-body { padding: 2.5rem var(--mob-pad); }
 
+  /* Hero — prevent long words from clipping */
+  .page-hero h1 { word-break: break-word; hyphens: auto; }
+
   /* Section titles + desc align */
   .section-title { font-size: 1.25rem; }
   .section-desc { font-size: .875rem; }
+
+  /* Font showcase — scale down large display text */
+  .serio-showcase-text { font-size: 2rem !important; }
+
+  /* Type scale previews — scaled for 375px */
+  .preview-display-large { font-size: 2.75rem !important; }
+  .preview-display       { font-size: 2rem !important; }
+  .preview-h1            { font-size: 1.75rem !important; }
+  .preview-h2            { font-size: 1.5rem !important; }
+  .preview-h3            { font-size: 1.25rem !important; }
+
+  /* Showcase card padding */
+  .font-showcase-card,
+  [style*="padding: 3rem 3rem"] { padding: 2rem var(--mob-pad) !important; }
 
   /* Prevent horizontal overflow */
   .main { overflow-x: hidden; }
