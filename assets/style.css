@@ -54,11 +54,16 @@
   --olive-light:#E0E6D1;   /* Gröngrå 3 */
   --olive-xlight:#F9FBF2;  /* Gröngrå 4 */
 
-  /* Grå */
-  --gray-20:    #C8C8C8;   /* Grå 1 */
-  --gray-40:    #E2E2E2;   /* Grå 2 */
-  --gray-60:    #F7F7F7;   /* Grå 3 */
-  --gray-80:    #6b6b60;   /* Behålls för text */
+  /* Grå (UI — kanter, bakgrunder, dividers) */
+  --gray-ui-1:  #C8C8C8;   /* Grå 1 — kanter */
+  --gray-ui-2:  #E2E2E2;   /* Grå 2 — dividers */
+  --gray-ui-3:  #F7F7F7;   /* Grå 3 — ytor */
+
+  /* Grå (text — behålls mörka för läsbarhet) */
+  --gray-20:    #C8C8C8;   /* Kanter, borders */
+  --gray-40:    #999990;   /* Sekundär text, etiketter */
+  --gray-60:    #5a5a50;   /* Brödtext, beskrivningar */
+  --gray-80:    #2a2a22;   /* Mörk text */
 
   /* Bakgrunder */
   --cream:      #F9FBF2;   /* Gröngrå 4 — sidans bakgrund */
