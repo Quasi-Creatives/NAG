@@ -36,12 +36,14 @@
       <a href="logo.html">Logotyp</a>
       <a href="color.html" class="active">Färg</a>
       <a href="typography.html">Typografi</a>
-      <a href="spacing.html">Spacing</a>
-      <a href="iconography.html">Ikonografi</a>
     </div>
     <div class="nav-group">
       <div class="nav-group-label">UI-komponenter</div>
       <a href="components.html">Knappar</a>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-label">Implementering</div>
+      <a href="implementering.html">Kom igång</a>
     </div>
     <div class="nav-group">
       <div class="nav-group-label">Röst</div>
@@ -187,62 +189,6 @@
       </div>
 
       <div class="section">
-        <h2 class="section-title">Funktionsfärger</h2>
-        <p class="section-desc">Reserverade enbart för statuskommunikation. Använd inte dekorativt.</p>
-        <div class="swatch-grid">
-          <div class="swatch">
-            <div class="swatch-block" style="background:#2d6a3f;"></div>
-            <div class="swatch-info">
-              <div class="swatch-name">Framgång</div>
-              <div class="swatch-hex">#2d6a3f</div>
-              <div class="swatch-role">Positivt / Bekräftat</div>
-            </div>
-          </div>
-          <div class="swatch">
-            <div class="swatch-block" style="background:#b5392a;"></div>
-            <div class="swatch-info">
-              <div class="swatch-name">Fel</div>
-              <div class="swatch-hex">#b5392a</div>
-              <div class="swatch-role">Fel / Destruktivt</div>
-            </div>
-          </div>
-          <div class="swatch">
-            <div class="swatch-block" style="background:#c8a020;"></div>
-            <div class="swatch-info">
-              <div class="swatch-name">Varning</div>
-              <div class="swatch-hex">#c8a020</div>
-              <div class="swatch-role">Försiktighet / Uppmärksamhet</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
-        <h2 class="section-title">Färg-tokens</h2>
-        <p class="section-desc">Referera till dessa tokennamn i designfiler och kod.</p>
-        <table class="token-table">
-          <thead>
-            <tr><th>Token</th><th>Hex</th><th>CMYK</th><th>Användning</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><code>--pistage</code></td><td><code>#D4E3A2</code></td><td>—</td><td>Knappar, accent, taggar</td></tr>
-            <tr><td><code>--pistage-2</code></td><td><code>#E6F3BE</code></td><td>—</td><td>Hover, ljusare accent</td></tr>
-            <tr><td><code>--pistage-3</code></td><td><code>#F6FFD7</code></td><td>—</td><td>Bakgrundstoningar, callouts</td></tr>
-            <tr><td><code>--gg-1</code></td><td><code>#484C3E</code></td><td>—</td><td>Mörk text, rubriker</td></tr>
-            <tr><td><code>--gg-2</code></td><td><code>#8A8F7B</code></td><td>—</td><td>Sekundär text, sidebar</td></tr>
-            <tr><td><code>--gg-3</code></td><td><code>#B1B6A3</code></td><td>—</td><td>Etiketter, placeholders</td></tr>
-            <tr><td><code>--gg-4</code></td><td><code>#E0E6D1</code></td><td>—</td><td>Kortytor, bakgrundselement</td></tr>
-            <tr><td><code>--gg-5</code></td><td><code>#F9FBF2</code></td><td>—</td><td>Sidans bakgrund</td></tr>
-            <tr><td><code>--gray-1</code></td><td><code>#C8C8C8</code></td><td>—</td><td>Kanter, borders</td></tr>
-            <tr><td><code>--gray-2</code></td><td><code>#E2E2E2</code></td><td>—</td><td>Dividers, avdelare</td></tr>
-            <tr><td><code>--gray-3</code></td><td><code>#F7F7F7</code></td><td>—</td><td>Subtila bakgrunder</td></tr>
-            <tr><td><code>--white</code></td><td><code>#FFFFFF</code></td><td>—</td><td>Kortytor, text på mörkt</td></tr>
-            <tr><td><code>--black</code></td><td><code>#000000</code></td><td>—</td><td>Primär text, bakgrunder</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="section">
         <h2 class="section-title">Kontrast &amp; tillgänglighet</h2>
         <div class="callout">Alla textkombinationer måste uppfylla WCAG 2.1 AA: 4,5:1 för normal text, 3:1 för stor text. Kol (#000000) på Ljus pistage (#F6FFD9) klarar AAA (19:1). Undvik mörk text direkt på Pistage (#D4E3A2) — kontrasterna är otillräckliga för liten text.</div>
         <div class="do-dont">
@@ -267,27 +213,6 @@
         </div>
       </div>
 
-
-      <div class="section">
-        <div class="download-section-header">
-          <h2 class="section-title" style="border:none; padding:0; margin:0;">Ladda ner tokens</h2>
-          <a href="assets/nag-tokens.css" download="nag-tokens.css" class="download-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            nag-tokens.css
-          </a>
-        </div>
-        <p class="section-desc">En färdig CSS-fil med alla färg-, typografi- och spacing-tokens. Klistra in i ditt projekt och börja använda variablerna direkt.</p>
-        <div style="background: var(--black); padding: 1.5rem; border-radius: 2px; font-family: 'Courier New', monospace; font-size: .8125rem; color: #d4e3a2; line-height: 1.8; overflow-x: auto;">
-          <span style="color: #929781;">/* Importera i din CSS */</span><br>
-          @import url('nag-tokens.css');<br><br>
-          <span style="color: #929781;">/* Sedan använd variablerna */</span><br>
-          .hero {<br>
-          &nbsp;&nbsp;background: <span style="color: #D4E3A2;">var(--nag-kol)</span>;<br>
-          &nbsp;&nbsp;color: <span style="color: #D4E3A2;">var(--nag-vit)</span>;<br>
-          &nbsp;&nbsp;font-family: <span style="color: #D4E3A2;">var(--nag-font-display)</span>;<br>
-          }
-        </div>
-      </div>
 
       <!-- MOCKUPS -->
       <div class="section">
