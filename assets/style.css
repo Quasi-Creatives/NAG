@@ -71,7 +71,7 @@
   --gray-80:    var(--gg-1);
 
   /* Bakgrunder */
-  --cream:      var(--gg-5);   /* Gröngrå 5 — sidans bakgrund */
+  --cream:      var(--gray-3); /* Grå 3 — sidans bakgrund */
   --cream-mid:  var(--gg-4);   /* Gröngrå 4 — kortytor */
 
   --sidebar-w:  260px;
