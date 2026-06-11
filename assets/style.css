@@ -412,31 +412,38 @@ a:hover { text-decoration: underline; }
 /* ─── Type Scale ───────────────────────────────────────────── */
 .type-row {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   gap: 2rem;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
+  border-top: 1px solid var(--gray-20);
+}
+
+.type-row:last-of-type {
   border-bottom: 1px solid var(--gray-20);
 }
 
 .type-meta {
   width: 140px;
   flex-shrink: 0;
+  padding-top: .125rem;
 }
 
 .type-meta .label {
+  font-family: 'GD Grio';
   font-size: .625rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--gray-40);
+  color: var(--gg-2);
+  margin-bottom: .5rem;
 }
 
 .type-meta .specs {
+  font-family: 'GD Grio';
   font-size: .75rem;
-  color: var(--text-dark);
-  margin-top: .25rem;
-  font-family: 'Courier New', monospace;
-  line-height: 1.7;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.6;
 }
 
 .type-preview { flex: 1; }
