@@ -415,7 +415,11 @@ a:hover { text-decoration: underline; }
   align-items: flex-start;
   gap: 2rem;
   padding: 2rem 0;
-  border-top: 1px solid var(--gray-20);
+  border-bottom: 1px solid var(--gray-20);
+}
+
+.type-row:first-of-type {
+  border-top: none;
 }
 
 .type-row:last-of-type {
