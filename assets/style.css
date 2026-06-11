@@ -262,14 +262,6 @@ a:hover { text-decoration: underline; }
 
 .page-hero > * { position: relative; z-index: 1; }
 
-.page-hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--pistage) 0%, transparent 70%);
-  z-index: 2;
-}
 
 /* ─── Per-page hero backgrounds ───────────────────────────────
  * Replace the gradient with background-image: url(...) on each
