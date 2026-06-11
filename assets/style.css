@@ -37,21 +37,32 @@
 
 :root {
   /* NAG officiell färgpalett */
-  --black:      #000000;   /* Kol */
-  --dark:       #111111;   /* Kol mjukad för sidebar */
-  --olive:      #929781;   /* Grön-grå */
-  --olive-mid:  #b5ba9e;   /* Grön-grå ljusare */
-  --olive-light:#D4E3A2;   /* Pistage */
-  --cream:      #f7f7f5;   /* Neutral ljusgrå — sidans bakgrund */
-  --cream-mid:  #efefec;   /* Lätt mörkare neutral för kortytor */
-  --pistage:    #D4E3A2;   /* Pistage */
-  --pistage-box:#dde8b1;   /* Pistage box (logotypfil) */
-  --white:      #ffffff;
-  --gray-20:    #d8d8d0;
-  --gray-40:    #a8a89a;
-  --gray-60:    #6b6b60;
-  --gray-80:    #3a3a30;
+  --black:      #000000;
+  --dark:       #111111;   /* Sidebar bakgrund */
+  --white:      #FFFFFF;
   --text-dark:  #000000;
+
+  /* Pistage */
+  --pistage:    #D4E3A2;   /* Pistage 1 */
+  --pistage-2:  #E6F3BE;   /* Pistage 2 */
+  --pistage-3:  #F6FFD7;   /* Pistage 3 */
+  --pistage-box:#D4E3A2;
+
+  /* Gröngrå */
+  --olive:      #8A8F7B;   /* Gröngrå 1 */
+  --olive-mid:  #B1B6A3;   /* Gröngrå 2 */
+  --olive-light:#E0E6D1;   /* Gröngrå 3 */
+  --olive-xlight:#F9FBF2;  /* Gröngrå 4 */
+
+  /* Grå */
+  --gray-20:    #C8C8C8;   /* Grå 1 */
+  --gray-40:    #E2E2E2;   /* Grå 2 */
+  --gray-60:    #F7F7F7;   /* Grå 3 */
+  --gray-80:    #6b6b60;   /* Behålls för text */
+
+  /* Bakgrunder */
+  --cream:      #F9FBF2;   /* Gröngrå 4 — sidans bakgrund */
+  --cream-mid:  #E0E6D1;   /* Gröngrå 3 — kortytor */
 
   --sidebar-w:  260px;
   --header-h:   56px;
