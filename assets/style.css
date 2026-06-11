@@ -252,10 +252,10 @@ a:hover { text-decoration: underline; }
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,.90) 0%,
-    rgba(0,0,0,.60) 40%,
-    rgba(0,0,0,.20) 75%,
-    rgba(0,0,0,.10) 100%
+    rgba(0,0,0,.80) 0%,
+    rgba(0,0,0,.55) 40%,
+    rgba(0,0,0,.30) 75%,
+    rgba(0,0,0,.20) 100%
   );
   z-index: 0;
 }
