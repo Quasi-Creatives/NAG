@@ -36,38 +36,43 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* NAG officiell färgpalett */
+  /* ── NAG officiell färgpalett ─────────────────────────────── */
+
   --black:      #000000;
-  --dark:       #111111;   /* Sidebar bakgrund */
   --white:      #FFFFFF;
-  --text-dark:  #000000;
+  --dark:       #111111;   /* Sidebar bakgrund */
 
   /* Pistage */
-  --pistage:    #D4E3A2;   /* Pistage 1 */
+  --pistage:    #D4E3A2;   /* Pistage 1 — accent, knappar */
   --pistage-2:  #E6F3BE;   /* Pistage 2 */
-  --pistage-3:  #F6FFD7;   /* Pistage 3 */
+  --pistage-3:  #F6FFD7;   /* Pistage 3 — ljus toning */
   --pistage-box:#D4E3A2;
 
   /* Gröngrå */
-  --olive:      #8A8F7B;   /* Gröngrå 1 */
-  --olive-mid:  #B1B6A3;   /* Gröngrå 2 */
-  --olive-light:#E0E6D1;   /* Gröngrå 3 */
-  --olive-xlight:#F9FBF2;  /* Gröngrå 4 */
+  --gg-1:       #484C3E;   /* Gröngrå 1 — mörk text, headings */
+  --gg-2:       #8A8F7B;   /* Gröngrå 2 — sekundär text */
+  --gg-3:       #B1B6A3;   /* Gröngrå 3 — etiketter, placeholders */
+  --gg-4:       #E0E6D1;   /* Gröngrå 4 — kortytor */
+  --gg-5:       #F9FBF2;   /* Gröngrå 5 — sidans bakgrund */
 
-  /* Grå (UI — kanter, bakgrunder, dividers) */
-  --gray-ui-1:  #C8C8C8;   /* Grå 1 — kanter */
-  --gray-ui-2:  #E2E2E2;   /* Grå 2 — dividers */
-  --gray-ui-3:  #F7F7F7;   /* Grå 3 — ytor */
+  /* Grå */
+  --gray-1:     #C8C8C8;   /* Grå 1 — kanter */
+  --gray-2:     #E2E2E2;   /* Grå 2 — dividers */
+  --gray-3:     #F7F7F7;   /* Grå 3 — ytor */
 
-  /* Grå (text — behålls mörka för läsbarhet) */
-  --gray-20:    #C8C8C8;   /* Kanter, borders */
-  --gray-40:    #999990;   /* Sekundär text, etiketter */
-  --gray-60:    #5a5a50;   /* Brödtext, beskrivningar */
-  --gray-80:    #2a2a22;   /* Mörk text */
+  /* ── Semantiska alias (används i komponenter) ─────────────── */
+  --text-dark:  #000000;
+  --olive:      var(--gg-2);
+  --olive-mid:  var(--gg-3);
+  --olive-light:var(--gg-4);
+  --gray-20:    var(--gray-1);
+  --gray-40:    var(--gg-3);
+  --gray-60:    var(--gg-2);
+  --gray-80:    var(--gg-1);
 
   /* Bakgrunder */
-  --cream:      #F9FBF2;   /* Gröngrå 4 — sidans bakgrund */
-  --cream-mid:  #E0E6D1;   /* Gröngrå 3 — kortytor */
+  --cream:      var(--gg-5);   /* Gröngrå 5 — sidans bakgrund */
+  --cream-mid:  var(--gg-4);   /* Gröngrå 4 — kortytor */
 
   --sidebar-w:  260px;
   --header-h:   56px;
