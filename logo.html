@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Logotyp — Nordic Access Group</title>
-  <link rel="stylesheet" href="assets/style.css?v=23" />
+  <link rel="stylesheet" href="assets/style.css?v=24" />
   <style>
     .logo-showcase {
       border: 1px solid var(--gray-20);
@@ -100,36 +100,29 @@
         <h2 class="section-title">Frizon</h2>
         <p class="section-desc">Frizonen är symbolens höjd (X) och ska alltid hållas fri på alla fyra sidor — oavsett storlek och kontext.</p>
 
-        <!-- Frizon-diagram: X utanför den streckade rutan -->
-        <div style="border: 1px solid var(--gray-20); background: var(--white); padding: 3.5rem 3rem 2.5rem; margin-bottom: 1.5rem;">
-          <div style="display: flex; align-items: center; justify-content: center;">
-            <div style="position: relative; display: inline-block;">
+        <!-- Frizon-diagram med ghost-symboler -->
+        <div style="border: 1px solid var(--gray-20); background: var(--white); padding: 3.5rem 2rem 3rem; margin-bottom: 1.5rem; overflow: hidden;">
+          <div style="display: flex; align-items: center; justify-content: center; gap: 0;">
 
-              <!-- X ovan -->
-              <div style="text-align: center; font-size: .75rem; font-style: italic; color: var(--olive); margin-bottom: .4rem; letter-spacing: .04em;">x</div>
-
-              <div style="display: flex; align-items: center;">
-                <!-- X vänster -->
-                <div style="font-size: .75rem; font-style: italic; color: var(--olive); margin-right: .4rem; letter-spacing: .04em;">x</div>
-
-                <!-- Streckad frizonram + logotyp -->
-                <div style="border: 1.5px dashed var(--olive-mid); padding: 1.25rem 2rem;">
-                  <img src="assets/logos/NAG-logo_primär-svart.svg" alt="Nordic Access Group" style="height: 32px; width: auto; display: block;">
-                </div>
-
-                <!-- X höger -->
-                <div style="font-size: .75rem; font-style: italic; color: var(--olive); margin-left: .4rem; letter-spacing: .04em;">x</div>
-              </div>
-
-              <!-- X nedan -->
-              <div style="text-align: center; font-size: .75rem; font-style: italic; color: var(--olive); margin-top: .4rem; letter-spacing: .04em;">x</div>
+            <!-- Ghost-symboler vänster -->
+            <div style="display: flex; flex-direction: column; gap: 6px; margin-right: -1px; flex-shrink: 0;">
+              <img src="assets/logos/NAG-logo_symbol-svart.svg" style="width: 48px; height: 48px; opacity: .10;" alt="">
+              <img src="assets/logos/NAG-logo_symbol-svart.svg" style="width: 48px; height: 48px; opacity: .10;" alt="">
+              <img src="assets/logos/NAG-logo_symbol-svart.svg" style="width: 48px; height: 48px; opacity: .10;" alt="">
             </div>
-          </div>
 
-          <!-- Legend -->
-          <div style="display: flex; align-items: center; justify-content: center; gap: .625rem; margin-top: 2rem;">
-            <div style="width: 28px; border-top: 1.5px dashed var(--olive-mid);"></div>
-            <span style="font-size: .8125rem; color: var(--gray-60);">= Frizon (X = symbolens höjd)</span>
+            <!-- Logotyp-box -->
+            <div style="border: 1px solid var(--gray-20); padding: 2.5rem 3.5rem; flex-shrink: 0;">
+              <img src="assets/logos/NAG-logo_primär-svart.svg" alt="Nordic Access Group" style="height: 40px; width: auto; display: block;">
+            </div>
+
+            <!-- Ghost-symboler höger -->
+            <div style="display: flex; flex-direction: column; gap: 6px; margin-left: -1px; flex-shrink: 0;">
+              <img src="assets/logos/NAG-logo_symbol-svart.svg" style="width: 48px; height: 48px; opacity: .10;" alt="">
+              <img src="assets/logos/NAG-logo_symbol-svart.svg" style="width: 48px; height: 48px; opacity: .10;" alt="">
+              <img src="assets/logos/NAG-logo_symbol-svart.svg" style="width: 48px; height: 48px; opacity: .10;" alt="">
+            </div>
+
           </div>
         </div>
 
