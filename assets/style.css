@@ -191,7 +191,7 @@ a:hover { text-decoration: underline; }
   font-weight: 600;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.4);
+  color: var(--pistage);
   padding: 0 1.5rem .5rem;
 }
 
