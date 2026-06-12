@@ -1088,7 +1088,8 @@ a:hover { text-decoration: underline; }
   .logo-grid,
   .symbol-grid { grid-template-columns: 1fr; }
 
-  .placement-grid { grid-template-columns: repeat(2, 1fr); }
+  .placement-grid { grid-template-columns: 1fr 1fr; }
+  .placement-logo { height: 10px !important; }
 
   .swatch-grid { grid-template-columns: repeat(2, 1fr); }
 
@@ -1108,6 +1109,7 @@ a:hover { text-decoration: underline; }
   /* Logo showcase inner — less padding */
   .logo-showcase-inner { padding: 2rem 1.25rem; }
   .logo-showcase-inner.pad-large { padding: 2.5rem 1.25rem; }
+  .logo-showcase-inner img { max-width: min(240px, 70%); }
 
   /* Type scale */
   .type-row { flex-direction: column; gap: .75rem; }
