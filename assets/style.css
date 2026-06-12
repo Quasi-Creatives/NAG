@@ -476,7 +476,7 @@ a:hover { text-decoration: underline; }
 
 .spacing-token {
   font-size: .8125rem;
-  font-family: 'Courier New', monospace;
+  font-family: 'GD Grio', monospace;
   color: var(--text-dark);
   font-weight: 600;
   width: 100px;
@@ -485,7 +485,7 @@ a:hover { text-decoration: underline; }
 .spacing-value {
   font-size: .8125rem;
   color: var(--gray-60);
-  font-family: 'Courier New', monospace;
+  font-family: 'GD Grio', monospace;
 }
 
 .spacing-use {
@@ -672,7 +672,7 @@ a:hover { text-decoration: underline; }
 }
 
 .token-table td code {
-  font-family: 'Courier New', monospace;
+  font-family: 'GD Grio', monospace;
   font-size: .8125rem;
   background: var(--cream-mid);
   padding: .1rem .4rem;
